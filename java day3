@@ -1,1 +1,146 @@
+Encapsulation Class:
 
+
+package com.demo;
+
+import java.util.Date;
+public class EncapsulationClass {
+	private String username;
+	private String password;
+	private String email;
+	private String address;
+	private long mobile;
+	private Date createdAT;
+	private Date updatedAT;
+	private boolean isActive ;
+	
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username=username;
+		}
+	
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password=password;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email=email;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address=address;
+	}
+	
+	public long getMobile() {
+		return mobile;
+	}
+	public void setMobile(long mobile) {
+		this.mobile=mobile;
+	}
+	
+	
+	public Date getCreatedAT() {
+		return createdAT;
+	}
+	public void setCreatedAT(Date createdAT) {
+		this.createdAT=createdAT;
+	}
+	
+	
+	public Date getUpdatedAT() {
+		return updatedAT;
+	}
+	public void setUpdatedAT(Date updatedAT) {
+		this.updatedAT=updatedAT;
+	}
+	
+	
+	public boolean getIsActive() {
+		return isActive;
+	}
+	public void setIsActive(boolean isActive) {
+		this.isActive=isActive;
+	}
+
+}	
+
+
+
+Runner:
+
+
+package com.demo;
+import java.util.Date;
+import java.util.Scanner;
+public class Register {
+ public static void main(String[] args){
+	 Scanner in = new Scanner(System.in);
+	 System.out.println("Enter your Username:");
+	 String username = in.nextLine();
+	 System.out.println("Enter your Password:");
+	 String password = in.nextLine();
+	 System.out.println("Enter your Email:");
+	 String email = in.nextLine();
+	 System.out.println("Enter your Address:");
+	 String address = in.nextLine();
+	 System.out.println("Enter your Mobile Number:");
+	 long mobile = in.nextLong();
+	 Date createdAT = new Date();
+	 Date updatedAT = new Date();
+	 boolean isActive = true;
+	 
+	 EncapsulationClass person1 = new EncapsulationClass();
+	 person1.setUsername(username);
+	 person1.setPassword(password);
+	 person1.setEmail(email);
+	 person1.setAddress(address);
+	 person1.setMobile(mobile);
+	 person1.setCreatedAT(createdAT);
+	 person1.setUpdatedAT(updatedAT);
+	 person1.setIsActive(isActive);
+	 
+	 System.out.println("your name :"+  person1.getUsername());
+	 System.out.println("Your password :"+ person1.getPassword());
+	 System.out.println("Your email :"+ person1.getEmail());
+	 System.out.println("Your address :"+ person1.getAddress());
+	 System.out.println("Your mobile number :"+ person1.getMobile());
+	 System.out.println(person1.getCreatedAT());
+	 System.out.println(person1.getUpdatedAT());
+	 System.out.println(person1.getIsActive());
+ }
+}
+
+
+
+
+OUTPUT:
+
+Enter your Username:
+Vaishal
+Enter your Password:
+1234567890
+Enter your Email:
+1234567890@123
+Enter your Address:
+qwertyuiop
+Enter your Mobile Number:
+1234567890
+your name :Vaishal
+Your password :1234567890
+Your email :1234567890@123
+Your address :qwertyuiop
+Your mobile number :1234567890
+Wed Mar 19 15:18:13 IST 2025
+Wed Mar 19 15:18:13 IST 2025
+true
