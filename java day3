@@ -2,7 +2,6 @@ Encapsulation Class:
 
 
 package com.demo;
-
 import java.util.Date;
 public class EncapsulationClass {
 	private String username;
