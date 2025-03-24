@@ -1,1 +1,59 @@
+class  ExceptionHandling
+package com.demo;
+
+public class ExceptionHandling {
+	public static void main(String args[]) {
+		try {
+		System.out.println(12/0);
+		}
+		catch(ArithmeticException ae){
+			ae.printStackTrace();	
+		}
+			catch(Exception e) {
+			e.printStackTrace();
+			}	finally {
+				System.out.println("hi hello");
+			}
+		System.out.println("hi hello");
+		
+	}
+	
+	}
+
+UserValidation
+
+
+package com.demo;
+import java.util.Scanner;
+public class UserValidation {
+	public static void main(String args[])throws NameValidator{ 
+	Scanner nm = new Scanner(System.in);	
+	System.out.println("Enter the name:");
+	String name=nm.nextLine().toUpperCase();
+	char[] ch= name.toCharArray();
+	for(char x:ch) {
+		if('A'<=x && 'Z'>=x) {
+			 System.out.println("Validation Successfull");	
+	}
+		else if('0'<=x && '9'>=x) {
+			throw new NameValidator("Number");
+		}
+		else {
+			throw new NameValidator("Symbol");
+			
+		}
+	}
+	}
+}
+class NameValidator extends Exception {
+	NameValidator(String str){
+		super(str);
+	}
+	
+	
+				 
+	}
+
+
+
 
