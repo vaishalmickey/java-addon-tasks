@@ -1,0 +1,35 @@
+UserValidation.java
+
+
+
+package com.demo;
+import java.util.Scanner;
+public class UserValidation {
+	public static void main(String args[])throws NameValidator{ 
+	Scanner nm = new Scanner(System.in);	
+	System.out.println("Enter the name:");
+	String name=nm.nextLine().toUpperCase();
+	char[] ch= name.toCharArray();
+	for(char x:ch) {
+		if('A'<=x && 'Z'>=x) {
+			 System.out.println("Validation Successfull");	
+	}
+		else if('0'<=x && '9'>=x) {
+			throw new NameValidator("Number");
+		}
+		else {
+			throw new NameValidator("Symbol");
+			
+		}
+	}
+	}
+}
+class NameValidator extends Exception {
+	NameValidator(String str){
+		super(str);
+	}
+	
+	
+				 
+	}
+
